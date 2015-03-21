@@ -3,7 +3,6 @@ class Usuario < ActiveRecord::Base
 	validates :nome, :sobrenome, :email, presence: true
 	validates :email, uniqueness: true
 
-
 	def nome_completo
 		"#{nome} #{sobrenome}"
 	end
