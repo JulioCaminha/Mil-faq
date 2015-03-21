@@ -9,3 +9,8 @@
 # Criando Seed de Perfil
 
 	Perfil.create([{descricao: "Administrador"}, {descricao: "Relator"}, {descricao: "Leitor"}])
+
+
+# Criando Seed de Status
+	
+	Status.create([{descricao: "Em aberto"}, {descricao: "Resolvido"}])
