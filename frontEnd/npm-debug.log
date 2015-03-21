@@ -1,0 +1,397 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/julio/.nvm/v0.11.16/bin/node',
+1 verbose cli   '/home/julio/.nvm/v0.11.16/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '--save',
+1 verbose cli   'gulp-install' ]
+2 info using npm@2.3.0
+3 info using node@v0.11.16
+4 silly cache add args [ 'gulp-install', null ]
+5 verbose cache add spec gulp-install
+6 silly cache add parsed spec { raw: 'gulp-install',
+6 silly cache add   scope: null,
+6 silly cache add   name: 'gulp-install',
+6 silly cache add   rawSpec: '',
+6 silly cache add   spec: '*',
+6 silly cache add   type: 'range' }
+7 verbose addNamed gulp-install@*
+8 silly addNamed semver.valid null
+9 silly addNamed semver.validRange *
+10 silly addNameRange { name: 'gulp-install', range: '*', hasData: false }
+11 silly mapToRegistry name gulp-install
+12 silly mapToRegistry using default registry
+13 silly mapToRegistry registry https://registry.npmjs.org/
+14 silly mapToRegistry uri https://registry.npmjs.org/gulp-install
+15 verbose addNameRange registry:https://registry.npmjs.org/gulp-install not in flight; fetching
+16 verbose request uri https://registry.npmjs.org/gulp-install
+17 verbose request no auth needed
+18 info attempt registry request try #1 at 12:04:37 AM
+19 verbose request id 90d9870749ab6e8c
+20 http request GET https://registry.npmjs.org/gulp-install
+21 http 200 https://registry.npmjs.org/gulp-install
+22 silly get cb [ 200,
+22 silly get   { date: 'Sat, 21 Mar 2015 03:04:37 GMT',
+22 silly get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+22 silly get     etag: '"2N46I8SR3NPOX8WSMLZAAD22O"',
+22 silly get     'content-type': 'application/json',
+22 silly get     'cache-control': 'max-age=60',
+22 silly get     'content-length': '11552',
+22 silly get     'accept-ranges': 'bytes',
+22 silly get     via: '1.1 varnish',
+22 silly get     age: '0',
+22 silly get     'x-served-by': 'cache-atl6231-ATL',
+22 silly get     'x-cache': 'MISS',
+22 silly get     'x-cache-hits': '0',
+22 silly get     'x-timer': 'S1426907077.794869,VS0,VE26',
+22 silly get     vary: 'Accept',
+22 silly get     'keep-alive': 'timeout=10, max=50',
+22 silly get     connection: 'Keep-Alive' } ]
+23 silly addNameRange number 2 { name: 'gulp-install', range: '*', hasData: true }
+24 silly addNameRange versions [ 'gulp-install',
+24 silly addNameRange   [ '0.1.1',
+24 silly addNameRange     '0.1.3',
+24 silly addNameRange     '0.1.4',
+24 silly addNameRange     '0.1.5',
+24 silly addNameRange     '0.1.6',
+24 silly addNameRange     '0.1.7',
+24 silly addNameRange     '0.1.8',
+24 silly addNameRange     '0.2.0' ] ]
+25 verbose addNamed gulp-install@0.2.0
+26 silly addNamed semver.valid 0.2.0
+27 silly addNamed semver.validRange 0.2.0
+28 silly mapToRegistry name gulp-install
+29 silly mapToRegistry using default registry
+30 silly mapToRegistry registry https://registry.npmjs.org/
+31 silly mapToRegistry uri https://registry.npmjs.org/gulp-install
+32 verbose addRemoteTarball https://registry.npmjs.org/gulp-install/-/gulp-install-0.2.0.tgz not in flight; adding
+33 verbose addRemoteTarball [ 'https://registry.npmjs.org/gulp-install/-/gulp-install-0.2.0.tgz',
+33 verbose addRemoteTarball   '0b22faf4b715064d43f66bf768469d53cf3ff018' ]
+34 info retry fetch attempt 1 at 12:04:38 AM
+35 info attempt registry request try #1 at 12:04:38 AM
+36 http fetch GET https://registry.npmjs.org/gulp-install/-/gulp-install-0.2.0.tgz
+37 http fetch 200 https://registry.npmjs.org/gulp-install/-/gulp-install-0.2.0.tgz
+38 silly fetchAndShaCheck shasum 0b22faf4b715064d43f66bf768469d53cf3ff018
+39 verbose addTmpTarball /tmp/npm-8621-e6a87fc4/registry.npmjs.org/gulp-install/-/gulp-install-0.2.0.tgz not in flight; adding
+40 verbose addTmpTarball already have metadata; skipping unpack for gulp-install@0.2.0
+41 silly cache afterAdd gulp-install@0.2.0
+42 verbose afterAdd /home/julio/.npm/gulp-install/0.2.0/package/package.json not in flight; writing
+43 verbose afterAdd /home/julio/.npm/gulp-install/0.2.0/package/package.json written
+44 silly install resolved [ { name: 'gulp-install',
+44 silly install resolved     version: '0.2.0',
+44 silly install resolved     description: 'Automatically install npm and bower packages if package.json or bower.json is found in the gulp file stream respectively',
+44 silly install resolved     main: 'index.js',
+44 silly install resolved     scripts: { test: 'NODE_ENV=test mocha -R spec' },
+44 silly install resolved     repository: { type: 'git', url: 'git://github.com/slushjs/gulp-install' },
+44 silly install resolved     keywords: [ 'gulpplugin', 'bower', 'npm', 'install' ],
+44 silly install resolved     author: { name: 'Joakim Bengtson', email: 'joakim@klei.se' },
+44 silly install resolved     license: 'MIT',
+44 silly install resolved     bugs: { url: 'https://github.com/slushjs/gulp-install/issues' },
+44 silly install resolved     homepage: 'https://github.com/slushjs/gulp-install',
+44 silly install resolved     dependencies: { through2: '^0.4.1', 'gulp-util': '^2.2.14', which: '^1.0.5' },
+44 silly install resolved     devDependencies: { chai: '^1.9.0', mocha: '^1.18.2' },
+44 silly install resolved     _id: 'gulp-install@0.2.0',
+44 silly install resolved     dist:
+44 silly install resolved      { shasum: '0b22faf4b715064d43f66bf768469d53cf3ff018',
+44 silly install resolved        tarball: 'http://registry.npmjs.org/gulp-install/-/gulp-install-0.2.0.tgz' },
+44 silly install resolved     _from: 'gulp-install@*',
+44 silly install resolved     _npmVersion: '1.3.17',
+44 silly install resolved     _npmUser: { name: 'joakimbeng', email: 'joakim@klei.se' },
+44 silly install resolved     maintainers: [ [Object] ],
+44 silly install resolved     directories: {},
+44 silly install resolved     _shasum: '0b22faf4b715064d43f66bf768469d53cf3ff018',
+44 silly install resolved     _resolved: 'https://registry.npmjs.org/gulp-install/-/gulp-install-0.2.0.tgz' } ]
+45 info install gulp-install@0.2.0 into /home/julio/Projetos/Mil-faq/frontEnd
+46 info installOne gulp-install@0.2.0
+47 verbose installOne of gulp-install to /home/julio/Projetos/Mil-faq/frontEnd not in flight; installing
+48 verbose lock using /home/julio/.npm/_locks/gulp-install-da0dd562a547469b.lock for /home/julio/Projetos/Mil-faq/frontEnd/node_modules/gulp-install
+49 silly install write writing gulp-install 0.2.0 to /home/julio/Projetos/Mil-faq/frontEnd/node_modules/gulp-install
+50 silly cache addNamed cb gulp-install@0.2.0
+51 verbose unbuild node_modules/gulp-install
+52 verbose gentlyRm vacuuming /home/julio/Projetos/Mil-faq/frontEnd/node_modules/gulp-install
+53 verbose tar unpack /home/julio/.npm/gulp-install/0.2.0/package.tgz
+54 verbose tar unpacking to /home/julio/Projetos/Mil-faq/frontEnd/node_modules/gulp-install
+55 verbose gentlyRm vacuuming /home/julio/Projetos/Mil-faq/frontEnd/node_modules/gulp-install
+56 silly gunzTarPerm modes [ '775', '664' ]
+57 silly gunzTarPerm extractEntry package.json
+58 silly gunzTarPerm modified mode [ 'package.json', 420, 436 ]
+59 silly gunzTarPerm extractEntry README.md
+60 silly gunzTarPerm modified mode [ 'README.md', 420, 436 ]
+61 silly gunzTarPerm extractEntry LICENSE
+62 silly gunzTarPerm modified mode [ 'LICENSE', 420, 436 ]
+63 silly gunzTarPerm extractEntry index.js
+64 silly gunzTarPerm modified mode [ 'index.js', 420, 436 ]
+65 silly gunzTarPerm extractEntry lib/commandRunner.js
+66 silly gunzTarPerm modified mode [ 'lib/commandRunner.js', 420, 436 ]
+67 silly gunzTarPerm extractEntry lib/test_commandRunner.js
+68 silly gunzTarPerm modified mode [ 'lib/test_commandRunner.js', 420, 436 ]
+69 info preinstall gulp-install@0.2.0
+70 silly prepareForInstallMany adding through2@^0.4.1 from gulp-install dependencies
+71 silly prepareForInstallMany adding gulp-util@^2.2.14 from gulp-install dependencies
+72 silly prepareForInstallMany adding which@^1.0.5 from gulp-install dependencies
+73 silly cache add args [ 'gulp-util@^2.2.14', null ]
+74 verbose cache add spec gulp-util@^2.2.14
+75 silly cache add parsed spec { raw: 'gulp-util@^2.2.14',
+75 silly cache add   scope: null,
+75 silly cache add   name: 'gulp-util',
+75 silly cache add   rawSpec: '^2.2.14',
+75 silly cache add   spec: '>=2.2.14 <3.0.0',
+75 silly cache add   type: 'range' }
+76 verbose addNamed gulp-util@>=2.2.14 <3.0.0
+77 silly addNamed semver.valid null
+78 silly addNamed semver.validRange >=2.2.14 <3.0.0
+79 silly addNameRange { name: 'gulp-util', range: '>=2.2.14 <3.0.0', hasData: false }
+80 silly mapToRegistry name gulp-util
+81 silly mapToRegistry using default registry
+82 silly mapToRegistry registry https://registry.npmjs.org/
+83 silly mapToRegistry uri https://registry.npmjs.org/gulp-util
+84 verbose addNameRange registry:https://registry.npmjs.org/gulp-util not in flight; fetching
+85 silly cache add args [ 'which@^1.0.5', null ]
+86 verbose cache add spec which@^1.0.5
+87 silly cache add parsed spec { raw: 'which@^1.0.5',
+87 silly cache add   scope: null,
+87 silly cache add   name: 'which',
+87 silly cache add   rawSpec: '^1.0.5',
+87 silly cache add   spec: '>=1.0.5 <2.0.0',
+87 silly cache add   type: 'range' }
+88 verbose addNamed which@>=1.0.5 <2.0.0
+89 silly addNamed semver.valid null
+90 silly addNamed semver.validRange >=1.0.5 <2.0.0
+91 silly addNameRange { name: 'which', range: '>=1.0.5 <2.0.0', hasData: false }
+92 silly mapToRegistry name which
+93 silly mapToRegistry using default registry
+94 silly mapToRegistry registry https://registry.npmjs.org/
+95 silly mapToRegistry uri https://registry.npmjs.org/which
+96 verbose addNameRange registry:https://registry.npmjs.org/which not in flight; fetching
+97 silly cache add args [ 'through2@^0.4.1', null ]
+98 verbose cache add spec through2@^0.4.1
+99 silly cache add parsed spec { raw: 'through2@^0.4.1',
+99 silly cache add   scope: null,
+99 silly cache add   name: 'through2',
+99 silly cache add   rawSpec: '^0.4.1',
+99 silly cache add   spec: '>=0.4.1 <0.5.0',
+99 silly cache add   type: 'range' }
+100 verbose addNamed through2@>=0.4.1 <0.5.0
+101 silly addNamed semver.valid null
+102 silly addNamed semver.validRange >=0.4.1 <0.5.0
+103 silly addNameRange { name: 'through2', range: '>=0.4.1 <0.5.0', hasData: false }
+104 silly mapToRegistry name through2
+105 silly mapToRegistry using default registry
+106 silly mapToRegistry registry https://registry.npmjs.org/
+107 silly mapToRegistry uri https://registry.npmjs.org/through2
+108 verbose addNameRange registry:https://registry.npmjs.org/through2 not in flight; fetching
+109 verbose request uri https://registry.npmjs.org/through2
+110 verbose request no auth needed
+111 info attempt registry request try #1 at 12:04:39 AM
+112 verbose etag "EI3B0TT8LELMVKUQNXYB4OGD9"
+113 http request GET https://registry.npmjs.org/through2
+114 verbose request uri https://registry.npmjs.org/gulp-util
+115 verbose request no auth needed
+116 info attempt registry request try #1 at 12:04:39 AM
+117 verbose etag "8RSN3VZXNEO83SYIF4TNF3LUM"
+118 http request GET https://registry.npmjs.org/gulp-util
+119 verbose request uri https://registry.npmjs.org/which
+120 verbose request no auth needed
+121 info attempt registry request try #1 at 12:04:39 AM
+122 verbose etag "ACJ1YRITE4VMV6GP70B3VUUQO"
+123 http request GET https://registry.npmjs.org/which
+124 http 304 https://registry.npmjs.org/through2
+125 silly get cb [ 304,
+125 silly get   { date: 'Sat, 21 Mar 2015 03:04:38 GMT',
+125 silly get     server: 'Apache',
+125 silly get     via: '1.1 varnish',
+125 silly get     'last-modified': 'Sat, 21 Mar 2015 03:04:38 GMT',
+125 silly get     'cache-control': 'max-age=60',
+125 silly get     etag: '"EI3B0TT8LELMVKUQNXYB4OGD9"',
+125 silly get     age: '15',
+125 silly get     'x-served-by': 'cache-atl6231-ATL',
+125 silly get     'x-cache': 'HIT',
+125 silly get     'x-cache-hits': '1',
+125 silly get     'x-timer': 'S1426907078.158587,VS0,VE1',
+125 silly get     vary: 'Accept',
+125 silly get     'content-length': '0',
+125 silly get     'keep-alive': 'timeout=10, max=48',
+125 silly get     connection: 'Keep-Alive' } ]
+126 verbose etag https://registry.npmjs.org/through2 from cache
+127 silly addNameRange number 2 { name: 'through2', range: '>=0.4.1 <0.5.0', hasData: true }
+128 silly addNameRange versions [ 'through2',
+128 silly addNameRange   [ '0.0.0',
+128 silly addNameRange     '0.0.1',
+128 silly addNameRange     '0.0.2',
+128 silly addNameRange     '0.0.3',
+128 silly addNameRange     '0.0.4',
+128 silly addNameRange     '0.0.5',
+128 silly addNameRange     '0.1.0',
+128 silly addNameRange     '0.2.0',
+128 silly addNameRange     '0.2.1',
+128 silly addNameRange     '0.2.2',
+128 silly addNameRange     '0.2.3',
+128 silly addNameRange     '0.3.0',
+128 silly addNameRange     '0.4.0',
+128 silly addNameRange     '0.4.1',
+128 silly addNameRange     '1.0.0',
+128 silly addNameRange     '0.4.2',
+128 silly addNameRange     '0.5.0',
+128 silly addNameRange     '0.5.1',
+128 silly addNameRange     '0.6.0',
+128 silly addNameRange     '1.1.0',
+128 silly addNameRange     '0.6.1',
+128 silly addNameRange     '1.1.1',
+128 silly addNameRange     '0.6.2',
+128 silly addNameRange     '0.6.3' ] ]
+129 verbose addNamed through2@0.4.2
+130 silly addNamed semver.valid 0.4.2
+131 silly addNamed semver.validRange 0.4.2
+132 silly mapToRegistry name through2
+133 silly mapToRegistry using default registry
+134 silly mapToRegistry registry https://registry.npmjs.org/
+135 silly mapToRegistry uri https://registry.npmjs.org/through2
+136 verbose addRemoteTarball https://registry.npmjs.org/through2/-/through2-0.4.2.tgz not in flight; adding
+137 verbose addRemoteTarball [ 'https://registry.npmjs.org/through2/-/through2-0.4.2.tgz',
+137 verbose addRemoteTarball   'dbf5866031151ec8352bb6c4db64a2292a840b9b' ]
+138 info retry fetch attempt 1 at 12:04:39 AM
+139 info attempt registry request try #1 at 12:04:39 AM
+140 http fetch GET https://registry.npmjs.org/through2/-/through2-0.4.2.tgz
+141 http fetch 200 https://registry.npmjs.org/through2/-/through2-0.4.2.tgz
+142 silly fetchAndShaCheck shasum dbf5866031151ec8352bb6c4db64a2292a840b9b
+143 verbose addTmpTarball /tmp/npm-8621-e6a87fc4/registry.npmjs.org/through2/-/through2-0.4.2.tgz not in flight; adding
+144 verbose addTmpTarball already have metadata; skipping unpack for through2@0.4.2
+145 silly cache afterAdd through2@0.4.2
+146 verbose afterAdd /home/julio/.npm/through2/0.4.2/package/package.json not in flight; writing
+147 verbose afterAdd /home/julio/.npm/through2/0.4.2/package/package.json written
+148 http 304 https://registry.npmjs.org/gulp-util
+149 silly get cb [ 304,
+149 silly get   { date: 'Sat, 21 Mar 2015 03:04:38 GMT',
+149 silly get     server: 'Apache',
+149 silly get     via: '1.1 varnish',
+149 silly get     'last-modified': 'Sat, 21 Mar 2015 03:04:38 GMT',
+149 silly get     'cache-control': 'max-age=60',
+149 silly get     etag: '"8RSN3VZXNEO83SYIF4TNF3LUM"',
+149 silly get     age: '0',
+149 silly get     'x-served-by': 'cache-atl6229-ATL',
+149 silly get     'x-cache': 'HIT',
+149 silly get     'x-cache-hits': '1',
+149 silly get     'x-timer': 'S1426907078.788746,VS0,VE79',
+149 silly get     vary: 'Accept',
+149 silly get     'content-length': '0',
+149 silly get     'keep-alive': 'timeout=10, max=50',
+149 silly get     connection: 'Keep-Alive' } ]
+150 verbose etag https://registry.npmjs.org/gulp-util from cache
+151 silly addNameRange number 2 { name: 'gulp-util', range: '>=2.2.14 <3.0.0', hasData: true }
+152 silly addNameRange versions [ 'gulp-util',
+152 silly addNameRange   [ '0.0.1',
+152 silly addNameRange     '1.0.0',
+152 silly addNameRange     '1.1.0',
+152 silly addNameRange     '1.1.1',
+152 silly addNameRange     '1.2.0',
+152 silly addNameRange     '1.3.0',
+152 silly addNameRange     '2.0.0',
+152 silly addNameRange     '2.1.1',
+152 silly addNameRange     '2.1.2',
+152 silly addNameRange     '2.1.3',
+152 silly addNameRange     '2.1.4',
+152 silly addNameRange     '2.2.0',
+152 silly addNameRange     '2.2.1',
+152 silly addNameRange     '2.2.2',
+152 silly addNameRange     '2.2.3',
+152 silly addNameRange     '2.2.5',
+152 silly addNameRange     '2.2.6',
+152 silly addNameRange     '2.2.7',
+152 silly addNameRange     '2.2.8',
+152 silly addNameRange     '2.2.9',
+152 silly addNameRange     '2.2.10',
+152 silly addNameRange     '2.2.11',
+152 silly addNameRange     '2.2.12',
+152 silly addNameRange     '2.2.13',
+152 silly addNameRange     '2.2.14',
+152 silly addNameRange     '2.2.15',
+152 silly addNameRange     '2.2.16',
+152 silly addNameRange     '2.2.17',
+152 silly addNameRange     '2.2.18',
+152 silly addNameRange     '2.2.19',
+152 silly addNameRange     '2.2.20',
+152 silly addNameRange     '3.0.0',
+152 silly addNameRange     '3.0.1',
+152 silly addNameRange     '3.0.2',
+152 silly addNameRange     '3.0.3',
+152 silly addNameRange     '3.0.4' ] ]
+153 verbose addNamed gulp-util@2.2.20
+154 silly addNamed semver.valid 2.2.20
+155 silly addNamed semver.validRange 2.2.20
+156 silly mapToRegistry name gulp-util
+157 silly mapToRegistry using default registry
+158 silly mapToRegistry registry https://registry.npmjs.org/
+159 silly mapToRegistry uri https://registry.npmjs.org/gulp-util
+160 verbose addRemoteTarball https://registry.npmjs.org/gulp-util/-/gulp-util-2.2.20.tgz not in flight; adding
+161 verbose addRemoteTarball [ 'https://registry.npmjs.org/gulp-util/-/gulp-util-2.2.20.tgz',
+161 verbose addRemoteTarball   'd7146e5728910bd8f047a6b0b1e549bc22dbd64c' ]
+162 info retry fetch attempt 1 at 12:04:39 AM
+163 info attempt registry request try #1 at 12:04:39 AM
+164 http fetch GET https://registry.npmjs.org/gulp-util/-/gulp-util-2.2.20.tgz
+165 http 304 https://registry.npmjs.org/which
+166 silly get cb [ 304,
+166 silly get   { date: 'Sat, 21 Mar 2015 03:04:38 GMT',
+166 silly get     server: 'Apache',
+166 silly get     via: '1.1 varnish',
+166 silly get     'last-modified': 'Sat, 21 Mar 2015 03:04:06 GMT',
+166 silly get     'cache-control': 'max-age=60',
+166 silly get     etag: '"ACJ1YRITE4VMV6GP70B3VUUQO"',
+166 silly get     age: '33',
+166 silly get     'x-served-by': 'cache-atl6226-ATL',
+166 silly get     'x-cache': 'HIT',
+166 silly get     'x-cache-hits': '2',
+166 silly get     'x-timer': 'S1426907078.908225,VS0,VE0',
+166 silly get     vary: 'Accept',
+166 silly get     'content-length': '0',
+166 silly get     'keep-alive': 'timeout=10, max=50',
+166 silly get     connection: 'Keep-Alive' } ]
+167 verbose etag https://registry.npmjs.org/which from cache
+168 silly addNameRange number 2 { name: 'which', range: '>=1.0.5 <2.0.0', hasData: true }
+169 silly addNameRange versions [ 'which',
+169 silly addNameRange   [ '1.0.0',
+169 silly addNameRange     '1.0.1',
+169 silly addNameRange     '1.0.2',
+169 silly addNameRange     '1.0.3',
+169 silly addNameRange     '1.0.5',
+169 silly addNameRange     '1.0.6',
+169 silly addNameRange     '1.0.7',
+169 silly addNameRange     '1.0.8',
+169 silly addNameRange     '1.0.9' ] ]
+170 verbose addNamed which@1.0.9
+171 silly addNamed semver.valid 1.0.9
+172 silly addNamed semver.validRange 1.0.9
+173 silly cache afterAdd which@1.0.9
+174 verbose afterAdd /home/julio/.npm/which/1.0.9/package/package.json not in flight; writing
+175 verbose afterAdd /home/julio/.npm/which/1.0.9/package/package.json written
+176 http fetch 200 https://registry.npmjs.org/gulp-util/-/gulp-util-2.2.20.tgz
+177 silly fetchAndShaCheck shasum d7146e5728910bd8f047a6b0b1e549bc22dbd64c
+178 verbose addTmpTarball /tmp/npm-8621-e6a87fc4/registry.npmjs.org/gulp-util/-/gulp-util-2.2.20.tgz not in flight; adding
+179 verbose addTmpTarball already have metadata; skipping unpack for gulp-util@2.2.20
+180 verbose about to build /home/julio/Projetos/Mil-faq/frontEnd/node_modules/gulp-install
+181 verbose unlock done using /home/julio/.npm/_locks/gulp-install-da0dd562a547469b.lock for /home/julio/Projetos/Mil-faq/frontEnd/node_modules/gulp-install
+182 verbose stack Error: EACCES, mkdir '/home/julio/.npm/gulp-util/2.2.20'
+182 verbose stack     at Error (native)
+183 verbose cwd /home/julio/Projetos/Mil-faq/frontEnd
+184 error Linux 3.16.0-31-generic
+185 error argv "/home/julio/.nvm/v0.11.16/bin/node" "/home/julio/.nvm/v0.11.16/bin/npm" "install" "--save" "gulp-install"
+186 error node v0.11.16
+187 error npm  v2.3.0
+188 error path /home/julio/.npm/gulp-util/2.2.20
+189 error code EACCES
+190 error errno -13
+191 error Error: EACCES, mkdir '/home/julio/.npm/gulp-util/2.2.20'
+191 error     at Error (native)
+191 error  { [Error: EACCES, mkdir '/home/julio/.npm/gulp-util/2.2.20']
+191 error   errno: -13,
+191 error   code: 'EACCES',
+191 error   path: '/home/julio/.npm/gulp-util/2.2.20',
+191 error   parent: 'gulp-install' }
+192 error Please try running this command again as root/Administrator.
+193 verbose exit [ -13, true ]
+194 verbose unbuild node_modules/gulp-install
+195 info preuninstall gulp-install@0.2.0
+196 info uninstall gulp-install@0.2.0
+197 verbose unbuild rmStuff gulp-install@0.2.0 from /home/julio/Projetos/Mil-faq/frontEnd/node_modules
+198 info postuninstall gulp-install@0.2.0
+199 verbose gentlyRm vacuuming /home/julio/Projetos/Mil-faq/frontEnd/node_modules/gulp-install
+200 silly gentlyRm purging /home/julio/Projetos/Mil-faq/frontEnd/node_modules/gulp-install
+201 silly gentlyRm quitting because other entries in /home/julio/Projetos/Mil-faq/frontEnd/node_modules

@@ -1,7 +1,9 @@
 {
   "name": "milfaq",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "gulp-install": "^0.2.0"
+  },
   "repository": {},
   "devDependencies": {
     "grunt": "^0.4.5",

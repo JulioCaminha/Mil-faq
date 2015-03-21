@@ -3,7 +3,6 @@ class CreateUsuarios < ActiveRecord::Migration
     create_table :usuarios do |t|
       t.string :nome
       t.string :email
-
       t.timestamps null: false
     end
   end
