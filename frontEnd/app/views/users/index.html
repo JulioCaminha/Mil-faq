@@ -13,6 +13,7 @@
                     <tr>
                         <th>#</th>
                         <th>Nome</th>
+                        <th>Sobrenome</th>
                         <th>Email</th>
                         <th>Ações</th>
                     </tr>
@@ -21,6 +22,7 @@
                     <tr ng-repeat="user in users | filter:busca | orderBy:'id'">
                         <td>{{user.id}}</td>
                         <td><i class="glyphicon glyphicon-user"></i> {{user.nome}}</td>
+                        <td>{{user.sobrenome}}</td>
                         <td><i class="glyphicon glyphicon-envelope"></i> {{user.email}}</td>
                         <td>
                             <a class="btn btn-sm btn-default" ui-sref="usersShow({id:user.id})"><i class="glyphicon glyphicon-eye-open"></i></a>

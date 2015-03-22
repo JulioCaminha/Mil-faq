@@ -4,7 +4,7 @@ class Usuario < ActiveRecord::Base
 	validates :email, uniqueness: true
 
 	def nome_completo
-		"#{nome} #{sobrenome}"
+		[nome,sobrenome].join(' ')
 	end
 
 end
