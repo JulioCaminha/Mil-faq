@@ -12,6 +12,8 @@ angular.module('milfaqApp')
     
     $scope.index = function(){
       $scope.users = usersFactory.index();
+      $scope.sortType = "id";
+      $scope.sortReverse = false;
     };
 
     $scope.destroy = function(user) {
@@ -32,7 +34,18 @@ angular.module('milfaqApp')
 }])
 
 .controller('UsersShowController', ['$scope', '$stateParams', 'usersFactory', function($scope, $stateParams, usersFactory) {
-    $scope.user = usersFactory.show({id: $stateParams.id});
+  
+    usersFactory.show({id: $stateParams.id}).$promise.then(
+      //sucess
+      function( data ){
+        $scope.user = data;
+      },
+      //error
+      function( error ){
+        console.log( error );
+      }
+    );
+
 }])
 
 .controller('UsersNewController', ['$scope', '$stateParams','$state', 'usersFactory', function($scope, $stateParams, $state ,usersFactory) {
