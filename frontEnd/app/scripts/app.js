@@ -18,6 +18,8 @@ angular
     'ngSanitize',
     'ngTouch',
     'usersFactory',
+    'problemsFactory',
+    'profilesFactory',
   ])
 
 .config(function ($stateProvider,$urlRouterProvider) {
@@ -27,6 +29,8 @@ angular
       templateUrl: 'views/main.html',
       controller: 'MainCtrl'
     })
+
+    //Users
     .state('usersIndex', {
       url:'/users',
       templateUrl: 'views/users/index.html',
@@ -47,5 +51,28 @@ angular
       templateUrl: 'views/users/edit.html',
       controller: 'UsersEditController'
     })
+
+    //Problems
+    .state('problemsIndex', {
+      url:'/problems',
+      templateUrl: 'views/problems/index.html',
+      controller: 'ProblemsIndexController'
+    })
+    .state('problemsShow', {
+      url: '/problems/:id/show',
+      templateUrl: 'views/problems/show.html',
+      controller: 'ProblemsShowController'
+    })
+    .state('problemsNew', {
+      url:'/problems/new',
+      templateUrl: 'views/problems/new.html',
+      controller: 'ProblemsNewController'
+    })
+    .state('problemsEdit', {
+      url:'/problems/:id/edit',
+      templateUrl: 'views/problems/edit.html',
+      controller: 'ProblemsEditController'
+    })
+
    $urlRouterProvider.otherwise('/');
 });

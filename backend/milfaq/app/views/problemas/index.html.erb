@@ -18,8 +18,8 @@
       <tr>
         <td><%= problema.descricao %></td>
         <td><%= problema.resposta %></td>
-        <td><%= problema.status %></td>
-        <td><%= problema.relator %></td>
+        <td><%= problema.status_id %></td>
+        <td><%= problema.usuario_id %></td>
         <td><%= link_to 'Show', problema %></td>
         <td><%= link_to 'Edit', edit_problema_path(problema) %></td>
         <td><%= link_to 'Destroy', problema, method: :delete, data: { confirm: 'Are you sure?' } %></td>

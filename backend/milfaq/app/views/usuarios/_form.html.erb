@@ -23,7 +23,15 @@
     <%= f.label :email %><br>
     <%= f.text_field :email %>
   </div>
-  
+  <!-- <div class="field">
+    <%= f.label :perfil_id %><br>
+    <%= f.number_field :perfil_id %>
+  </div> -->
+  <div class="field">
+    <%= f.label :perfil_id %><br>
+    <%= f.collection_select :perfil_id, Perfil.all, :id, :descricao, :prompt => "Selecionar perfil" %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

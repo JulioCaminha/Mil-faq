@@ -1,3 +1,6 @@
 class Problema < ActiveRecord::Base
-	validates :descricao, :status, :relator, presence: true
+	belongs_to :usuario
+	belongs_to :status
+	
+	validates :descricao, :status_id, :usuario_id, presence: true
 end

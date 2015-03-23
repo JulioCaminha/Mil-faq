@@ -48,7 +48,7 @@ angular.module('milfaqApp')
 
 }])
 
-.controller('UsersNewController', ['$scope', '$stateParams','$state', 'usersFactory', function($scope, $stateParams, $state ,usersFactory) {
+.controller('UsersNewController', ['$scope', '$stateParams','$state', 'usersFactory', 'profilesFactory', function($scope, $stateParams, $state , usersFactory, profilesFactory) {
     
     $scope.users = {};
 
@@ -66,9 +66,22 @@ angular.module('milfaqApp')
       );
     };
 
+    $scope.load_perfis = function() {
+      profilesFactory.index().$promise.then(
+        function (data) {
+          $scope.perfis = data;
+        },
+        function (error) {
+          console.log(error);
+        }
+      );
+    };
+
+    $scope.load_perfis();
+
 }])
 
-.controller('UsersEditController', ['$scope', '$stateParams','$state', 'usersFactory', function($scope, $stateParams, $state, usersFactory) {
+.controller('UsersEditController', ['$scope', '$stateParams','$state', 'usersFactory', 'profilesFactory', function($scope, $stateParams, $state, usersFactory, profilesFactory) {
     
     $scope.users = {};
 
@@ -97,5 +110,17 @@ angular.module('milfaqApp')
       );
     };
 
+    $scope.load_perfis = function() {
+      profilesFactory.index().$promise.then(
+        function (data) {
+          $scope.perfis = data;
+        },
+        function (error) {
+          console.log(error);
+        }
+      );
+    };
+    
+    $scope.load_perfis();
     $scope.load();
 }]);

@@ -1,0 +1,39 @@
+<fieldset>
+    <legend>Lista de Problemas</legend>
+</fieldset>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4>Problemas {{problems.length}}</h4>
+        <a class="btn btn-sm btn-success btn-table" ui-sref="problemsNew">Novo Problema</a>
+    </div>
+    <div class="panel-body">
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th><a href="" ng-click="sortType = 'id'; sortReverse =!sortReverse">#</a></th>
+                        <th><a href="" ng-click="sortType = 'descricao'; sortReverse =!sortReverse">Descricao</a></th>
+                        <th><a href="" ng-click="sortType = 'resposta'; sortReverse =!sortReverse">Resposta</a></th>
+                        <th><a href="" ng-click="sortType = 'status'; sortReverse =!sortReverse">Status</a></th>
+                        <th><a href="" ng-click="sortType = 'email'; sortReverse =!sortReverse">Relator</a></th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="problem in problems | filter:busca | orderBy:sortType:sortReverse">
+                        <td>{{problem.id}}</td>
+                        <td>{{problem.descricao}}</td>
+                        <td>{{problem.resposta}}</td>
+                        <td>{{problem.status_id}}</td>
+                        <td>{{problem.usuario_id}}</td>
+                        <td>
+                            <a class="btn btn-sm btn-default" ui-sref="problemsShow({id:problem.id})"><i class="glyphicon glyphicon-eye-open"></i></a>
+                            <a class="btn btn-sm btn-default" ui-sref="problemsEdit({id:problem.id})"><i class="glyphicon glyphicon-pencil"></i></a>
+                            <a class="btn btn-sm btn-danger" ng-click="destroy({id: problem.id})"><i class="glyphicon glyphicon-trash"></i></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

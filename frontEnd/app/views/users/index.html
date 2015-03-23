@@ -12,8 +12,7 @@
                 <thead>
                     <tr>
                         <th><a href="" ng-click="sortType = 'id'; sortReverse =!sortReverse">#</a></th>
-                        <th><a href="" ng-click="sortType = 'nome'; sortReverse =!sortReverse">Nome</a></th>
-                        <th><a href="" ng-click="sortType = 'sobrenome'; sortReverse =!sortReverse">Sobrenome</a></th>
+                        <th><a href="" ng-click="sortType = 'nome_completo'; sortReverse =!sortReverse">Nome</a></th>
                         <th><a href="" ng-click="sortType = 'email'; sortReverse =!sortReverse">Email</a></th>
                         <th>Ações</th>
                     </tr>
@@ -21,8 +20,7 @@
                 <tbody>
                     <tr ng-repeat="user in users | filter:busca | orderBy:sortType:sortReverse">
                         <td>{{user.id}}</td>
-                        <td><i class="glyphicon glyphicon-user"></i> {{user.nome}}</td>
-                        <td>{{user.sobrenome}}</td>
+                        <td><i class="glyphicon glyphicon-user"></i> {{user.nome_completo}}</td>
                         <td><i class="glyphicon glyphicon-envelope"></i> {{user.email}}</td>
                         <td>
                             <a class="btn btn-sm btn-default" ui-sref="usersShow({id:user.id})"><i class="glyphicon glyphicon-eye-open"></i></a>

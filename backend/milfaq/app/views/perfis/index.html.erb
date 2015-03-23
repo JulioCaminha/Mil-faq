@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing perfis</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Email</th>
+      <th>Perfil</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @perfis.each do |perfil| %>
+      <tr>
+        <td><%= perfil.descricao%></td>
+        <td><%= link_to 'Show', perfil %></td>
+        <td><%= link_to 'Edit', edit_perfil_path(perfil) %></td>
+        <td><%= link_to 'Destroy', perfil, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Perfil', new_perfil_path %>
