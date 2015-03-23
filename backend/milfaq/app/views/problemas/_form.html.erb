@@ -21,11 +21,11 @@
   </div>
   <div class="field">
     <%= f.label :status %><br>
-    <%= f.number_field :status_id %>
+    <%= f.collection_select :status_id, Status.all, :id, :descricao, :prompt => "Selecionar Status" %>
   </div>
   <div class="field">
     <%= f.label :relator %><br>
-    <%= f.number_field :usuario_id %>
+    <%= f.collection_select :usuario_id, Usuario.where(" perfil_id = 2 "), :id, :nome_completo, :prompt => "Selecione o Autor" %>
   </div>
   <div class="actions">
     <%= f.submit %>

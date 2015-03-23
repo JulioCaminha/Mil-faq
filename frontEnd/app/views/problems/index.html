@@ -14,8 +14,8 @@
                         <th><a href="" ng-click="sortType = 'id'; sortReverse =!sortReverse">#</a></th>
                         <th><a href="" ng-click="sortType = 'descricao'; sortReverse =!sortReverse">Descricao</a></th>
                         <th><a href="" ng-click="sortType = 'resposta'; sortReverse =!sortReverse">Resposta</a></th>
-                        <th><a href="" ng-click="sortType = 'status'; sortReverse =!sortReverse">Status</a></th>
-                        <th><a href="" ng-click="sortType = 'email'; sortReverse =!sortReverse">Relator</a></th>
+                        <th><a href="" ng-click="sortType = 'status.descricao'; sortReverse =!sortReverse">Status</a></th>
+                        <th><a href="" ng-click="sortType = 'usuario.nome'; sortReverse =!sortReverse">Relator</a></th>
                         <th>Ações</th>
                     </tr>
                 </thead>
@@ -24,8 +24,8 @@
                         <td>{{problem.id}}</td>
                         <td>{{problem.descricao}}</td>
                         <td>{{problem.resposta}}</td>
-                        <td>{{problem.status_id}}</td>
-                        <td>{{problem.usuario_id}}</td>
+                        <td>{{problem.status.descricao}}</td>
+                        <td>{{problem.usuario.nome}}</td>
                         <td>
                             <a class="btn btn-sm btn-default" ui-sref="problemsShow({id:problem.id})"><i class="glyphicon glyphicon-eye-open"></i></a>
                             <a class="btn btn-sm btn-default" ui-sref="problemsEdit({id:problem.id})"><i class="glyphicon glyphicon-pencil"></i></a>

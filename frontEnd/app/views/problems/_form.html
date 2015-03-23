@@ -1,6 +1,6 @@
 <div class="panel panel-default">
     <div class="panel-heading">
-        <h4>Problema</h4>
+        <h4>Problema {{problema.id}}</h4>
     </div>
     <div class="panel-body">
         <div class="form-group">
@@ -10,21 +10,9 @@
             </div>
         </div>
         <div class="form-group">
-            <label for="Resposta" class="col-sm-2 control-label">Resposta:</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" ng-model="problem.resposta" placeholder="Resposta" required>
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="Status" class="col-sm-2 control-label">Status:</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" ng-model="problem.status" placeholder="Status" required>
-            </div>
-        </div>
-        <div class="form-group">
             <label for="Relator" class="col-sm-2 control-label">Relator:</label>
             <div class="col-sm-10">
-                 <input type="text" class="form-control" ng-model="problem.relator" placeholder="Relator" required>
+                 <select class="form-control" ng-init="problem.usuario_id = usuarios[0].id" ng-model="problem.usuario_id" ng-options="user.id as user.nome_completo for user in usuarios"></select>
             </div>
         </div>
         </div>
@@ -35,6 +23,3 @@
     </div>
 </div>
 
-
-
-<!-- <select class="form-control" ng-init="problema.usuario_id = usuarios[0].id" ng-model="problema.usuario_id" ng-options="usuario.id as user.nome_completo for user in usuarios"></select> -->

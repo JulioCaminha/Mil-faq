@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :respostas
+
   resources :usuarios
 
   resources :problemas

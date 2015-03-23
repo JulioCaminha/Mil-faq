@@ -11,10 +11,19 @@ angular.module('milfaqApp')
 
 .controller('ProblemsIndexController', ['$scope', 'problemsFactory', function($scope, problemsFactory) {
     
+    $scope.problema_to_destroy = {};
+
     $scope.index = function(){
-      $scope.problems = problemsFactory.index();
-      $scope.sortType = "id";
-      $scope.sortReverse = false;
+      problemsFactory.index().$promise.then(
+        function (data) {
+          $scope.problems = problemsFactory.index();
+          $scope.sortType = "id";
+          $scope.sortReverse = false;
+        },
+        function (error) {
+          console.log(error);
+        }
+      );
     };
 
     $scope.destroy = function(problem) {
@@ -31,32 +40,83 @@ angular.module('milfaqApp')
         );
     };
 
-  $scope.index();
-}])
+    
 
-.controller('ProblemsShowController', ['$scope', '$stateParams', 'problemsFactory', function($scope, $stateParams, problemsFactory) {
-  
-   
+  $scope.setProblemaToDestroy = function(id) {
+    $scope.problema_to_destroy = id;
+  };
 
-    problemsFactory.show({id: $stateParams.id}).$promise.then(
-      //sucess
-      function( data ){
-        $scope.problem = data;
+  $scope.update = function() {
+    $scope.problema.$update({id: $scope.problema.id}).then(
+      function( data ) {
+        $state.go('problemasIndex');
       },
-      //error
       function( error ){
         console.log( error );
       }
     );
+  };
 
+  $scope.index();
+}])
+
+.controller('ProblemsShowController', ['$scope', '$stateParams', 'problemsFactory', 'answersFactory', function($scope, $stateParams, problemsFactory, answersFactory) {
+  
+    $scope.problem = {};
+
+    $scope.show = function() {
+      problemsFactory.show({id: $stateParams.id}).$promise.then(
+      //sucess
+      function ( data ){
+        console.log( data );
+        $scope.problem = data;
+
+      },
+      //error
+      function ( error ){
+        console.log( error );
+      }
+    );
+  };
+
+  $scope.answer = function() {
+    $scope.resposta = {
+      descricao: $scope.problema.resposta,
+      usuario_id: $scope.problema.usuario_id,
+      problema_id: $scope.problema.id,
+    };
+
+    answersFactory.create($scope.resposta).$promise.then(
+      function ( data ){
+        $scope.show();
+        console.log (data); 
+      },
+      function ( error ){
+        console.log (error);
+
+        $scope.problema = {};
+
+        $scope.save = function() {
+          $scope.problema.status_id = 1;
+          answersFactory.create($scope.problema).promise.then(
+            function ( data ) {
+              $state.go('problemsIndex');
+            })
+        }
+      }
+      );
+  };
+
+  $scope.show();
     
 }])
 
-.controller('ProblemsNewController', ['$scope', '$stateParams','$state', 'problemsFactory',  function($scope, $stateParams, $state ,problemsFactory) {
+.controller('ProblemsNewController', ['$scope', '$stateParams','$state', 'problemsFactory', 'usersFactory', function($scope, $stateParams, $state ,problemsFactory, usersFactory) {
     
     $scope.problem = {};
 
     $scope.save = function() {
+        $scope.problem.status_id = 1;
         problemsFactory.create($scope.problem).$promise.then(
         //sucess
         function( data ){
@@ -70,9 +130,27 @@ angular.module('milfaqApp')
       );
     };
 
+    $scope.load_usuarios = function () {
+      usersFactory.index().$promise.then(
+        function (data) {
+          $scope.usuarios = data
+        },
+        function (error) {
+          console.log(error);
+        }
+      );
+    };
+
+    
+    
+    
+
+
+    $scope.load_usuarios();
+
 }])
 
-.controller('ProblemsEditController', ['$scope', '$stateParams','$state', 'problemsFactory', function($scope, $stateParams, $state, problemsFactory) {
+.controller('ProblemsEditController', ['$scope', '$stateParams','$state', 'problemsFactory', 'usersFactory', function($scope, $stateParams, $state, problemsFactory, usersFactory) {
     
     $scope.problem = {};
 
@@ -101,5 +179,17 @@ angular.module('milfaqApp')
       );
     };
 
+    $scope.load_usuarios = function () {
+      usersFactory.index().$promise.then(
+          function (data) {
+            $scope.usuarios = data
+          },
+          function (error) {
+            console.log(error);
+          }
+      );
+    };
+
+    $scope.load_usuarios();
     $scope.load();
 }]);

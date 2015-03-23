@@ -20,6 +20,7 @@ angular
     'usersFactory',
     'problemsFactory',
     'profilesFactory',
+    'answersFactory',
   ])
 
 .config(function ($stateProvider,$urlRouterProvider) {

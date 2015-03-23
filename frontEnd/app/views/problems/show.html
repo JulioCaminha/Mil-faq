@@ -1,26 +1,19 @@
-<fieldset>
-    <legend>Problema - {{problem.descricao}}</legend>
-</fieldset>
-<div class="panel panel-default">
-    <div class="panel-heading">
-        Problema
+<form class"form" ng-submit="answer()">
+    <fieldset>  
+        <legend>{{problem.descricao}}</legend>
+    </fieldset>
+    <div class="form-group" ng-repeat="resposta in respostas">
+        <label>Resposta {{resposta.id}}</label>
     </div>
-    <div class="panel-body">
-        <label>Descricao: </label>
-        </span>{{problem.descricao}}
-        <br/>
-        <label>Resposta: </label>
-        </span>{{problem.resposta}}
-        <br/>
-        <label>Criado em : </label>
-        </span>{{problem.created_at}}
-        <br/>
-        <label>Modificado em : </label>
-        </span>{{problem.updated_at}}
-        <br/>
-        <div class="pull-right">
-            <a ui-sref="problemsIndex" class="btn btn-primary">Voltar</a>
-            <a ui-sref="problemsEdit({id:problem.id})" class="btn btn-primary">Editar</a>
-        </div>
+    <textarea class="form-control" ng-model="resposta.descricao"></textarea>
+    <div class="form-group">
+        <hr>
+        <label>Responder</label>
+        <textarea class="form-control" ng-model="problema.resposta"></textarea>
     </div>
-</div>
+    <div class="pull-right">
+        <a ui-sref="problemsIndex" class="btn btn-primary">Voltar</a>
+        <button type="submit" class="btn btn-primary">Responder</button>
+    </div>
+
+</form>
